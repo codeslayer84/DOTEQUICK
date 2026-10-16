@@ -24,8 +24,8 @@ header-includes: |
   <meta name="dc.date" content="2026-10-16" />
   <meta name="citation_publication_date" content="2026-10-16" />
   <meta property="article:published_time" content="2026-10-16" />
-  <meta name="dc.modified" content="2026-10-16T11:44:42+00:00" />
-  <meta property="article:modified_time" content="2026-10-16T11:44:42+00:00" />
+  <meta name="dc.modified" content="2026-10-16T11:45:43+00:00" />
+  <meta property="article:modified_time" content="2026-10-16T11:45:43+00:00" />
   <meta name="dc.language" content="da-DK" />
   <meta name="citation_language" content="da-DK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://codeslayer84.github.io/DOTEQUICK/" />
   <meta name="citation_pdf_url" content="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/3ec650f34ba74207f2f49075b056ab586d0c957d/" />
-  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/3ec650f34ba74207f2f49075b056ab586d0c957d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/3ec650f34ba74207f2f49075b056ab586d0c957d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/" />
+  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,13 +61,14 @@ manubot-clear-requests-cache: false
 
 
 
+_Citér guiden: <https://doi.org/10.5281/zenodo.23417099>_
 
 
 <small><em>
 Denne version
-([permalink](https://codeslayer84.github.io/DOTEQUICK/v/3ec650f34ba74207f2f49075b056ab586d0c957d/))
+([permalink](https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/))
 er automatisk genereret
-fra [codeslayer84/DOTEQUICK@3ec650f](https://github.com/codeslayer84/DOTEQUICK/tree/3ec650f34ba74207f2f49075b056ab586d0c957d)
+fra [codeslayer84/DOTEQUICK@53bb49a](https://github.com/codeslayer84/DOTEQUICK/tree/53bb49ab54fd12698c48bee0965d345feaabc5e8)
 den 2026-10-16.
 </em></small>
 
