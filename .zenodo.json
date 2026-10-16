@@ -1,0 +1,34 @@
+{
+  "title": "Quickguide til DOTE 2.0",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "description": "<p>En dansk quickguide til DOTE (Distributed Open Transcription Environment): installation og licens, interfacet, start af et nyt projekt og transskription med Jefferson-konventioner. Guiden er permanent beta og opdateres løbende.</p><p>Nyeste version: <a href=\"https://codeslayer84.github.io/DOTEQUICK/\">https://codeslayer84.github.io/DOTEQUICK/</a></p>",
+  "creators": [
+    {
+      "name": "Davidsen, Jacob Gorm",
+      "affiliation": "Aalborg University, Department of Culture and Communication",
+      "orcid": "0000-0002-5240-9452"
+    }
+  ],
+  "language": "dan",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "DOTE",
+    "transskription",
+    "konversationsanalyse",
+    "Jefferson",
+    "quickguide"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://codeslayer84.github.io/DOTEQUICK/",
+      "relation": "isIdenticalTo",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "https://github.com/BigSoftVideo/DOTE/",
+      "relation": "documents",
+      "resource_type": "software"
+    }
+  ]
+}
