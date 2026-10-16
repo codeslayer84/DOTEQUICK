@@ -1,22 +1,24 @@
 [
 {
-  "id": "url:https://github.com/manubot/rootstock",
-  "type": "webpage",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
+  "id": "raw:dote",
+  "type": "software",
+  "title": "DOTE: Distributed Open Transcription Environment",
+  "URL": "https://github.com/BigSoftVideo/DOTE/",
+  "publisher": "GitHub",
+  "genre": "Computer programme",
   "issued": {
     "date-parts": [
       [
-        2019
+        2022,
+        6
       ]
     ]
   },
   "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
+    {"given": "Paul", "family": "McIlvenny"},
+    {"given": "Jacob Gorm", "family": "Davidsen"},
+    {"given": "Artúr Barnabás", "family": "Kovács"},
+    {"given": "Alexander", "family": "Stein"}
   ]
 }
 ]

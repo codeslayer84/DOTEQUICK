@@ -29,7 +29,7 @@ on:
       SPELLCHECK:
         type: boolean
         description: Check spelling
-        default: true
+        default: false
       MANUBOT_USE_DOCKER:
         type: boolean
         description: Use Docker to generate PDF
@@ -44,7 +44,7 @@ jobs:
       GITHUB_PULL_REQUEST_SHA: ${{ github.event.pull_request.head.sha }}
       # Set SPELLCHECK to true/false for whether to check spelling in this action.
       # For workflow dispatch jobs, this SPELLCHECK setting will be overridden by the user input.
-      SPELLCHECK: true
+      SPELLCHECK: false  # Disabled: hunspell checks English, but this manuscript is in Danish
     defaults:
       run:
         shell: bash --login {0}
