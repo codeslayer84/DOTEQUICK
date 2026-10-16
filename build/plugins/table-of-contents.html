@@ -10,7 +10,7 @@
   const typesQuery = "h1, h2, h3";
   // whether toc starts open. use 'true' or 'false', or 'auto' to
   // use 'true' behavior when screen wide enough and 'false' when not
-  const startOpen = "false";
+  const startOpen = "auto";
   // whether toc closes when clicking on toc link. use 'true' or
   // 'false', or 'auto' to use 'false' behavior when screen wide
   // enough and 'true' when not
@@ -124,12 +124,12 @@
     const button = document.createElement("button");
     button.id = "toc_button";
     button.innerHTML = document.querySelector(".icon_th_list").innerHTML;
-    button.title = "Table of Contents";
+    button.title = "Indhold";
     button.classList.add("icon_button");
 
     // create header text
     const text = document.createElement("h4");
-    text.innerHTML = "Table of Contents";
+    text.innerHTML = "Indhold";
 
     // create container for toc list
     const list = document.createElement("div");

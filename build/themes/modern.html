@@ -1,0 +1,529 @@
+<!--
+  Modern theme for the DOTE quickguide (web page and PDF).
+  Loaded after default.html (see build/pandoc/defaults/html.yaml) and only
+  overrides it, so the rootstock default theme can still be updated upstream.
+  The PDF is rendered from this same HTML, so the "print" section at the
+  bottom controls the PDF layout.
+-->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap");
+
+  /* -------------------------------------------------- */
+  /* tokens */
+  /* -------------------------------------------------- */
+
+  :root {
+    --accent: #304ca0; /* DOTE blue from the logo */
+    --accent-soft: #eef2fb;
+    --accent-2: #ef4136; /* DOTE red from the logo */
+    --text: #1d2433;
+    --muted: #5d6679;
+    --border: #e3e7ef;
+    --bg: #ffffff;
+    --bg-soft: #f6f8fc;
+    --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.08);
+    --radius: 12px;
+    --measure: 720px;
+  }
+
+  /* dark mode on screen only; the PDF is always light */
+  @media only screen and (prefers-color-scheme: dark) {
+    :root {
+      --accent: #8ea6ec;
+      --accent-soft: #1c2541;
+      --text: #e6e9f0;
+      --muted: #9aa3b5;
+      --border: #2a3142;
+      --bg: #12151c;
+      --bg-soft: #1a1e28;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    html {
+      color-scheme: dark;
+    }
+  }
+
+  /* -------------------------------------------------- */
+  /* typography and components (web page and PDF) */
+  /* -------------------------------------------------- */
+
+  * {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  code,
+  code * {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  body {
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* no automatic hyphenation (it splits shortcuts like CTRL+SPACE) */
+  body,
+  body * {
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--text);
+  }
+
+  header > h1,
+  h1.title {
+    margin: 0;
+    text-align: left;
+    font-size: 2.6em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  header + p {
+    text-align: left;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+
+  header + p em {
+    font-style: normal;
+  }
+
+  h2 {
+    margin: 72px 0 16px;
+    padding: 0;
+    border: none;
+    font-size: 1.75em;
+    font-weight: 700;
+  }
+
+  /* short red bar above each section heading */
+  h2::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 16px;
+    border-radius: 2px;
+    background: var(--accent-2);
+  }
+
+  h3 {
+    margin: 44px 0 8px;
+    font-size: 1.3em;
+    font-weight: 650;
+  }
+
+  h4 {
+    margin: 32px 0 4px;
+    font-size: 1.05em;
+    font-weight: 650;
+    color: var(--accent);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  ul,
+  ol {
+    padding-left: 24px;
+  }
+
+  li {
+    margin: 4px 0;
+  }
+
+  li > ul,
+  li > ol {
+    margin: 4px 0;
+  }
+
+  li::marker {
+    color: var(--muted);
+  }
+
+  hr {
+    background: var(--border);
+  }
+
+  /* authors */
+
+  h2#forfattere {
+    margin-top: 40px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  h2#forfattere::before {
+    display: none;
+  }
+
+  h2#forfattere + ul {
+    list-style: none;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+  }
+
+  #correspondence {
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  /* figures */
+
+  figure {
+    margin: 32px auto;
+  }
+
+  figure > img,
+  figure > svg,
+  figure > span > img {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: #fff;
+  }
+
+  figcaption {
+    padding-top: 12px;
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  img + figcaption > span:first-of-type,
+  svg + figcaption > span:first-of-type {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* logo on the front page: no frame */
+  img[src$="dote-logo.svg"] {
+    display: block;
+    margin: 40px 0 8px;
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  /* quotes, code, tables */
+
+  blockquote {
+    margin: 24px 0;
+    padding: 16px 20px;
+    border: none;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--accent-soft);
+    font-size: 0.92em;
+  }
+
+  blockquote > p:last-child {
+    margin-bottom: 0;
+  }
+
+  :not(pre) > code {
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: var(--bg-soft);
+    color: var(--text);
+    font-size: 0.9em;
+  }
+
+  pre {
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    color: var(--text);
+  }
+
+  th,
+  td {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 12px;
+  }
+
+  th,
+  tr:nth-child(2n),
+  tr:nth-child(2n + 1) {
+    background: transparent;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  /* highlighted text from the Word original */
+  .mark {
+    padding: 0 4px;
+    border-radius: 4px;
+    background: #fff3bf;
+    color: #1d2433;
+  }
+
+  #refs {
+    font-size: 0.9em;
+    color: var(--muted);
+  }
+
+  /* -------------------------------------------------- */
+  /* web page layout */
+  /* -------------------------------------------------- */
+
+  @media only screen {
+    html {
+      background: var(--bg);
+    }
+
+    body,
+    body.toc_body_nudge {
+      max-width: calc(var(--measure) + 48px);
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: var(--bg);
+      font-size: 17px;
+    }
+
+    /* table of contents panel (plugin) */
+
+    #toc_panel {
+      background: var(--bg);
+      box-shadow: none;
+    }
+
+    #toc_panel[data-open="false"] {
+      top: 16px;
+      left: 16px;
+      width: 44px;
+      min-width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    #toc_panel[data-open="false"] > #toc_header {
+      height: 44px;
+      padding: 0 12px;
+    }
+
+    #toc_panel[data-open="true"] {
+      width: 280px;
+      min-width: 0;
+      border-right: 1px solid var(--border);
+      background: var(--bg-soft);
+      box-shadow: var(--shadow);
+    }
+
+    #toc_panel[data-open="true"] > #toc_header {
+      border-bottom: none;
+    }
+
+    #toc_header h4 {
+      margin: 0;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    #toc_list {
+      padding: 4px 12px 24px;
+    }
+
+    .toc_link {
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.85em;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .toc_link[data-level="2"] {
+      margin-left: 0;
+      margin-top: 6px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .toc_link[data-level="3"] {
+      margin-left: 12px;
+    }
+
+    .toc_link:hover,
+    .toc_link[data-viewing="true"] {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .icon_button svg {
+      fill: var(--muted);
+    }
+  }
+
+  /* wide screens (where the toc plugin opens itself): dock toc on the left */
+  @media only screen and (min-width: 1336px) {
+    #toc_panel[data-open="true"] {
+      box-shadow: none;
+    }
+
+    body,
+    body.toc_body_nudge {
+      padding-left: 304px;
+      max-width: calc(var(--measure) + 304px + 24px);
+    }
+  }
+
+  /* small screens */
+  @media only screen and (max-width: 700px) {
+    body,
+    body.toc_body_nudge {
+      padding: 76px 18px 64px;
+      font-size: 16px;
+    }
+
+    header > h1,
+    h1.title {
+      font-size: 2em;
+    }
+
+    h2 {
+      margin-top: 56px;
+      font-size: 1.5em;
+    }
+
+    #toc_panel[data-open="true"] {
+      width: 85vw;
+    }
+  }
+
+  /* -------------------------------------------------- */
+  /* PDF layout */
+  /* -------------------------------------------------- */
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 20mm 22mm 22mm;
+    }
+
+    html,
+    body {
+      background: #fff;
+    }
+
+    body {
+      font-size: 10.5pt !important;
+      line-height: 1.6;
+    }
+
+    /* front page */
+    header > h1,
+    h1.title {
+      margin-top: 30mm;
+      font-size: 30pt;
+    }
+
+    img[src$="dote-logo.svg"] {
+      margin: 12mm 0 4mm;
+    }
+
+    h2 {
+      margin: 0 0 10pt;
+      font-size: 19pt;
+      break-after: avoid;
+    }
+
+    h2::before {
+      margin-bottom: 10pt;
+    }
+
+    h3 {
+      margin: 20pt 0 4pt;
+      font-size: 13pt;
+      break-after: avoid;
+    }
+
+    h4 {
+      margin: 14pt 0 2pt;
+      font-size: 11pt;
+      break-after: avoid;
+    }
+
+    h2#forfattere {
+      margin-top: 14mm;
+      font-size: 8.5pt;
+    }
+
+    p,
+    ul,
+    ol {
+      margin-bottom: 8pt;
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* screenshots: keep whole, cap height so they don't fill a page */
+    figure {
+      margin: 14pt auto;
+      break-inside: avoid;
+    }
+
+    figure > img,
+    figure > span > img {
+      max-height: 105mm;
+      width: auto;
+      object-fit: contain;
+      box-shadow: none;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      padding-top: 6pt;
+      font-size: 8.5pt;
+    }
+
+    blockquote {
+      break-inside: avoid;
+      border-radius: 0 8px 8px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #toc_panel,
+    .icon_button {
+      display: none !important;
+    }
+  }
+</style>
