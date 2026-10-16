@@ -6,7 +6,7 @@
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf)
 [![GitHub Actions Status](https://github.com/codeslayer84/DOTEQUICK/workflows/Manubot/badge.svg)](https://github.com/codeslayer84/DOTEQUICK/actions)
 
-<!-- DOI badge: paste the Zenodo concept-DOI badge here after the first release -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23417099.svg)](https://doi.org/10.5281/zenodo.23417099)
 
 ## Om guiden
 
@@ -17,6 +17,9 @@ Den nyeste version ligger altid her:
 
 + **HTML** – <https://codeslayer84.github.io/DOTEQUICK/>
 + **PDF** – <https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf>
+
+Citér guiden med DOI'en [10.5281/zenodo.23417099](https://doi.org/10.5281/zenodo.23417099), som altid peger på den nyeste udgivne version.
+Hver GitHub-release (fx `v1.1`) arkiveres automatisk på Zenodo som en ny version.
 
 Forslag til forbedringer modtages gerne som [issues](https://github.com/codeslayer84/DOTEQUICK/issues), pull requests eller på mail til <jdavidsen@ikk.aau.dk>.
 
