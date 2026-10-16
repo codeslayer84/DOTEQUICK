@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2026-10-16" />
   <meta name="citation_publication_date" content="2026-10-16" />
   <meta property="article:published_time" content="2026-10-16" />
-  <meta name="dc.modified" content="2026-10-16T11:14:54+00:00" />
-  <meta property="article:modified_time" content="2026-10-16T11:14:54+00:00" />
+  <meta name="dc.modified" content="2026-10-16T11:36:16+00:00" />
+  <meta property="article:modified_time" content="2026-10-16T11:36:16+00:00" />
   <meta name="dc.language" content="da-DK" />
   <meta name="citation_language" content="da-DK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://codeslayer84.github.io/DOTEQUICK/" />
   <meta name="citation_pdf_url" content="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/585033cc4b460bc8987901ac210a2452ee309cf9/" />
-  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/585033cc4b460bc8987901ac210a2452ee309cf9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/585033cc4b460bc8987901ac210a2452ee309cf9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/64e595c686cbdd77e54d4642c016a75b5b822968/" />
+  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/64e595c686cbdd77e54d4642c016a75b5b822968/" />
+  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/64e595c686cbdd77e54d4642c016a75b5b822968/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -88,11 +88,11 @@
 <h1 class="title">Quickguide til DOTE 2.0</h1>
 </header>
 <p><small><em>
-This manuscript
-(<a href="https://codeslayer84.github.io/DOTEQUICK/v/585033cc4b460bc8987901ac210a2452ee309cf9/">permalink</a>)
-was automatically generated
-from <a href="https://github.com/codeslayer84/DOTEQUICK/tree/585033cc4b460bc8987901ac210a2452ee309cf9">codeslayer84/DOTEQUICK@585033c</a>
-on October 16, 2026.
+Denne version
+(<a href="https://codeslayer84.github.io/DOTEQUICK/v/64e595c686cbdd77e54d4642c016a75b5b822968/">permalink</a>)
+er automatisk genereret
+fra <a href="https://github.com/codeslayer84/DOTEQUICK/tree/64e595c686cbdd77e54d4642c016a75b5b822968">codeslayer84/DOTEQUICK@64e595c</a>
+den 2026-10-16.
 </em></small></p>
 <h2 id="forfattere">Forfattere</h2>
 <ul>
@@ -108,8 +108,8 @@ Institut for Kultur og Kommunikation, Aalborg Universitet
 </small></li>
 </ul>
 <div id="correspondence">
-<p>✉ — Correspondence possible via <a href="https://github.com/codeslayer84/DOTEQUICK/issues">GitHub Issues</a>
-or email to
+<p>✉ — Kontakt via <a href="https://github.com/codeslayer84/DOTEQUICK/issues">GitHub Issues</a>
+eller mail til
 Jacob Gorm Davidsen &lt;jdavidsen@ikk.aau.dk&gt;.</p>
 </div>
 <figure>
@@ -1028,6 +1028,536 @@ Jacob Gorm Davidsen &lt;jdavidsen@ikk.aau.dk&gt;.</p>
     }
   }
 </style>
+<!--
+  Modern theme for the DOTE quickguide (web page and PDF).
+  Loaded after default.html (see build/pandoc/defaults/html.yaml) and only
+  overrides it, so the rootstock default theme can still be updated upstream.
+  The PDF is rendered from this same HTML, so the "print" section at the
+  bottom controls the PDF layout.
+-->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap");
+
+  /* -------------------------------------------------- */
+  /* tokens */
+  /* -------------------------------------------------- */
+
+  :root {
+    --accent: #304ca0; /* DOTE blue from the logo */
+    --accent-soft: #eef2fb;
+    --accent-2: #ef4136; /* DOTE red from the logo */
+    --text: #1d2433;
+    --muted: #5d6679;
+    --border: #e3e7ef;
+    --bg: #ffffff;
+    --bg-soft: #f6f8fc;
+    --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.08);
+    --radius: 12px;
+    --measure: 720px;
+  }
+
+  /* dark mode on screen only; the PDF is always light */
+  @media only screen and (prefers-color-scheme: dark) {
+    :root {
+      --accent: #8ea6ec;
+      --accent-soft: #1c2541;
+      --text: #e6e9f0;
+      --muted: #9aa3b5;
+      --border: #2a3142;
+      --bg: #12151c;
+      --bg-soft: #1a1e28;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    html {
+      color-scheme: dark;
+    }
+  }
+
+  /* -------------------------------------------------- */
+  /* typography and components (web page and PDF) */
+  /* -------------------------------------------------- */
+
+  * {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  code,
+  code * {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  body {
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* no automatic hyphenation (it splits shortcuts like CTRL+SPACE) */
+  body,
+  body * {
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--text);
+  }
+
+  header > h1,
+  h1.title {
+    margin: 0;
+    text-align: left;
+    font-size: 2.6em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+
+  header + p {
+    text-align: left;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.85em;
+  }
+
+  header + p em {
+    font-style: normal;
+  }
+
+  h2 {
+    margin: 72px 0 16px;
+    padding: 0;
+    border: none;
+    font-size: 1.75em;
+    font-weight: 700;
+  }
+
+  /* short red bar above each section heading */
+  h2::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 16px;
+    border-radius: 2px;
+    background: var(--accent-2);
+  }
+
+  h3 {
+    margin: 44px 0 8px;
+    font-size: 1.3em;
+    font-weight: 650;
+  }
+
+  h4 {
+    margin: 32px 0 4px;
+    font-size: 1.05em;
+    font-weight: 650;
+    color: var(--accent);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  ul,
+  ol {
+    padding-left: 24px;
+  }
+
+  li {
+    margin: 4px 0;
+  }
+
+  li > ul,
+  li > ol {
+    margin: 4px 0;
+  }
+
+  li::marker {
+    color: var(--muted);
+  }
+
+  hr {
+    background: var(--border);
+  }
+
+  /* authors */
+
+  h2#forfattere {
+    margin-top: 40px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  h2#forfattere::before {
+    display: none;
+  }
+
+  h2#forfattere + ul {
+    list-style: none;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+  }
+
+  #correspondence {
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  /* figures */
+
+  figure {
+    margin: 32px auto;
+  }
+
+  figure > img,
+  figure > svg,
+  figure > span > img {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: #fff;
+  }
+
+  figcaption {
+    padding-top: 12px;
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  img + figcaption > span:first-of-type,
+  svg + figcaption > span:first-of-type {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* logo on the front page: no frame */
+  img[src$="dote-logo.svg"] {
+    display: block;
+    margin: 40px 0 8px;
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  /* quotes, code, tables */
+
+  blockquote {
+    margin: 24px 0;
+    padding: 16px 20px;
+    border: none;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: var(--accent-soft);
+    font-size: 0.92em;
+  }
+
+  blockquote > p:last-child {
+    margin-bottom: 0;
+  }
+
+  :not(pre) > code {
+    padding: 1px 6px;
+    border-radius: 6px;
+    background: var(--bg-soft);
+    color: var(--text);
+    font-size: 0.9em;
+  }
+
+  pre {
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    color: var(--text);
+  }
+
+  th,
+  td {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 12px;
+  }
+
+  th,
+  tr:nth-child(2n),
+  tr:nth-child(2n + 1) {
+    background: transparent;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  /* highlighted text from the Word original */
+  .mark {
+    padding: 0 4px;
+    border-radius: 4px;
+    background: #fff3bf;
+    color: #1d2433;
+  }
+
+  #refs {
+    font-size: 0.9em;
+    color: var(--muted);
+  }
+
+  /* -------------------------------------------------- */
+  /* web page layout */
+  /* -------------------------------------------------- */
+
+  @media only screen {
+    html {
+      background: var(--bg);
+    }
+
+    body,
+    body.toc_body_nudge {
+      max-width: calc(var(--measure) + 48px);
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      background: var(--bg);
+      font-size: 17px;
+    }
+
+    /* table of contents panel (plugin) */
+
+    #toc_panel {
+      background: var(--bg);
+      box-shadow: none;
+    }
+
+    #toc_panel[data-open="false"] {
+      top: 16px;
+      left: 16px;
+      width: 44px;
+      min-width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    #toc_panel[data-open="false"] > #toc_header {
+      height: 44px;
+      padding: 0 12px;
+    }
+
+    #toc_panel[data-open="true"] {
+      width: 280px;
+      min-width: 0;
+      border-right: 1px solid var(--border);
+      background: var(--bg-soft);
+      box-shadow: var(--shadow);
+    }
+
+    #toc_panel[data-open="true"] > #toc_header {
+      border-bottom: none;
+    }
+
+    #toc_header h4 {
+      margin: 0;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    #toc_list {
+      padding: 4px 12px 24px;
+    }
+
+    .toc_link {
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.85em;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .toc_link[data-level="2"] {
+      margin-left: 0;
+      margin-top: 6px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .toc_link[data-level="3"] {
+      margin-left: 12px;
+    }
+
+    .toc_link:hover,
+    .toc_link[data-viewing="true"] {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .icon_button svg {
+      fill: var(--muted);
+    }
+  }
+
+  /* wide screens (where the toc plugin opens itself): dock toc on the left */
+  @media only screen and (min-width: 1336px) {
+    #toc_panel[data-open="true"] {
+      box-shadow: none;
+    }
+
+    body,
+    body.toc_body_nudge {
+      padding-left: 304px;
+      max-width: calc(var(--measure) + 304px + 24px);
+    }
+  }
+
+  /* small screens */
+  @media only screen and (max-width: 700px) {
+    body,
+    body.toc_body_nudge {
+      padding: 76px 18px 64px;
+      font-size: 16px;
+    }
+
+    header > h1,
+    h1.title {
+      font-size: 2em;
+    }
+
+    h2 {
+      margin-top: 56px;
+      font-size: 1.5em;
+    }
+
+    #toc_panel[data-open="true"] {
+      width: 85vw;
+    }
+  }
+
+  /* -------------------------------------------------- */
+  /* PDF layout */
+  /* -------------------------------------------------- */
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 20mm 22mm 22mm;
+    }
+
+    html,
+    body {
+      background: #fff;
+    }
+
+    body {
+      font-size: 10.5pt !important;
+      line-height: 1.6;
+    }
+
+    /* front page */
+    header > h1,
+    h1.title {
+      margin-top: 30mm;
+      font-size: 30pt;
+    }
+
+    img[src$="dote-logo.svg"] {
+      margin: 12mm 0 4mm;
+    }
+
+    h2 {
+      /* top margin is dropped at the top of a new page */
+      margin: 26pt 0 10pt;
+      font-size: 19pt;
+      break-after: avoid;
+    }
+
+    h2::before {
+      margin-bottom: 10pt;
+    }
+
+    h3 {
+      margin: 20pt 0 4pt;
+      font-size: 13pt;
+      break-after: avoid;
+    }
+
+    h4 {
+      margin: 14pt 0 2pt;
+      font-size: 11pt;
+      break-after: avoid;
+    }
+
+    h2#forfattere {
+      margin-top: 14mm;
+      font-size: 8.5pt;
+    }
+
+    p,
+    ul,
+    ol {
+      margin-bottom: 8pt;
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* screenshots: keep whole, cap height so they don't fill a page */
+    figure {
+      margin: 14pt auto;
+      break-inside: avoid;
+    }
+
+    figure > img,
+    figure > span > img {
+      max-height: 105mm;
+      width: auto;
+      object-fit: contain;
+      box-shadow: none;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      padding-top: 6pt;
+      font-size: 8.5pt;
+    }
+
+    blockquote {
+      break-inside: avoid;
+      border-radius: 0 8px 8px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #toc_panel,
+    .icon_button {
+      display: none !important;
+    }
+  }
+</style>
 <!-- 
     Plugin Core
 
@@ -1157,152 +1687,6 @@ Jacob Gorm Davidsen &lt;jdavidsen@ikk.aau.dk&gt;.</p>
     return elements;
   }
 </script>
-<!--
-  Accordion Plugin
-
-  Allows sections of content under h2 headings to be collapsible.
--->
-
-<script type="module">
-  // whether to always start expanded ('false'), always start collapsed
-  // ('true'), or start collapsed when screen small ('auto')
-  const startCollapsed = "auto";
-
-  // start script
-  function start() {
-    // run through each <h2> heading
-    const headings = document.querySelectorAll("h2");
-    for (const heading of headings) {
-      addArrow(heading);
-
-      // start expanded/collapsed based on option
-      if (
-        startCollapsed === "true" ||
-        (startCollapsed === "auto" && isSmallScreen()) ||
-        heading.dataset.collapsed === "true"
-      )
-        collapseHeading(heading);
-      else expandElement(heading);
-    }
-
-    // attach hash change listener to window
-    window.addEventListener("hashchange", onHashChange);
-  }
-
-  // when hash (eg manuscript.html#introduction) changes
-  function onHashChange() {
-    const target = getHashTarget();
-    if (target) goToElement(target);
-  }
-
-  // add arrow to heading
-  function addArrow(heading) {
-    // add arrow button
-    const arrow = document.createElement("button");
-    arrow.innerHTML = document.querySelector(".icon_angle_down").innerHTML;
-    arrow.classList.add("icon_button", "accordion_arrow");
-    heading.insertBefore(arrow, heading.firstChild);
-
-    // attach click listener to heading and button
-    heading.addEventListener("click", onHeadingClick);
-    arrow.addEventListener("click", onArrowClick);
-  }
-
-  // determine if on mobile-like device with small screen
-  function isSmallScreen() {
-    return Math.min(window.innerWidth, window.innerHeight) < 480;
-  }
-
-  // when <h2> heading is clicked
-  function onHeadingClick(event) {
-    // only collapse if <h2> itself is target of click (eg, user did
-    // not click on anchor within <h2>)
-    if (event.target === this) toggleCollapse(this);
-  }
-
-  // when arrow button is clicked
-  function onArrowClick() {
-    toggleCollapse(this.parentNode);
-  }
-
-  // collapse section if expanded, expand if collapsed
-  function toggleCollapse(heading) {
-    if (heading.dataset.collapsed === "false") collapseHeading(heading);
-    else expandElement(heading);
-  }
-
-  // elements to exclude from collapse, such as table of contents panel,
-  // hypothesis panel, etc
-  const exclude = "#toc_panel, div.annotator-frame, #lightbox_overlay";
-
-  // collapse section
-  function collapseHeading(heading) {
-    heading.setAttribute("data-collapsed", "true");
-    const children = getChildren(heading);
-    for (const child of children) child.setAttribute("data-collapsed", "true");
-  }
-
-  // expand section
-  function expandElement(heading) {
-    heading.setAttribute("data-collapsed", "false");
-    const children = getChildren(heading);
-    for (const child of children) child.setAttribute("data-collapsed", "false");
-  }
-
-  // get list of elements between this <h2> and next <h2> or <h1>
-  // ("children" of the <h2> section)
-  function getChildren(heading) {
-    return nextUntil(heading, "h2, h1", exclude);
-  }
-
-  // start script when document is finished loading
-  window.addEventListener("load", start);
-</script>
-
-<!-- angle down icon -->
-
-<template class="icon_angle_down">
-  <!-- modified from: https://fontawesome.com/icons/angle-down -->
-  <svg width="16" height="16" viewBox="0 0 448 512">
-    <path
-      fill="currentColor"
-      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-    ></path>
-  </svg>
-</template>
-
-<style>
-  @media only screen {
-    /* accordion arrow button */
-    .accordion_arrow {
-      margin-right: 10px;
-    }
-
-    /* arrow icon when <h2> data-collapsed attribute true */
-    h2[data-collapsed="true"] > .accordion_arrow > svg {
-      transform: rotate(-90deg);
-    }
-
-    /* all elements (except <h2>'s) when data-collapsed attribute true */
-    *:not(h2)[data-collapsed="true"] {
-      display: none;
-    }
-
-    /* accordion arrow button when hovered and <h2>'s when hovered */
-    .accordion_arrow:hover,
-    h2[data-collapsed="true"]:hover,
-    h2[data-collapsed="false"]:hover {
-      cursor: pointer;
-    }
-  }
-
-  /* always hide accordion arrow button on print */
-  @media only print {
-    .accordion_arrow {
-      display: none;
-    }
-  }
-</style>
 <!--
   Anchors Plugin
 
@@ -2449,7 +2833,7 @@ Jacob Gorm Davidsen &lt;jdavidsen@ikk.aau.dk&gt;.</p>
   const typesQuery = "h1, h2, h3";
   // whether toc starts open. use 'true' or 'false', or 'auto' to
   // use 'true' behavior when screen wide enough and 'false' when not
-  const startOpen = "false";
+  const startOpen = "auto";
   // whether toc closes when clicking on toc link. use 'true' or
   // 'false', or 'auto' to use 'false' behavior when screen wide
   // enough and 'true' when not
@@ -2563,12 +2947,12 @@ Jacob Gorm Davidsen &lt;jdavidsen@ikk.aau.dk&gt;.</p>
     const button = document.createElement("button");
     button.id = "toc_button";
     button.innerHTML = document.querySelector(".icon_th_list").innerHTML;
-    button.title = "Table of Contents";
+    button.title = "Indhold";
     button.classList.add("icon_button");
 
     // create header text
     const text = document.createElement("h4");
-    text.innerHTML = "Table of Contents";
+    text.innerHTML = "Indhold";
 
     // create container for toc list
     const list = document.createElement("div");
@@ -3353,172 +3737,6 @@ Jacob Gorm Davidsen &lt;jdavidsen@ikk.aau.dk&gt;.</p>
   
   Copy and paste code from Google Analytics or similar service here.
 -->
-<!-- 
-  Annotations Plugin
-
-  Allows public annotation of the  manuscript. See https://web.hypothes.is/.
--->
-
-<script type="module">
-  // configuration
-  window.hypothesisConfig = function () {
-    return {
-      branding: {
-        accentColor: "#2196f3",
-        appBackgroundColor: "#f8f8f8",
-        ctaBackgroundColor: "#f8f8f8",
-        ctaTextColor: "#000000",
-        selectionFontFamily: "Open Sans, Helvetica, sans serif",
-        annotationFontFamily: "Open Sans, Helvetica, sans serif",
-      },
-    };
-  };
-
-  // hypothesis client script
-  const embed = "https://hypothes.is/embed.js";
-  // hypothesis annotation count query url
-  const query = "https://api.hypothes.is/api/search?limit=0&url=";
-
-  // start script
-  function start() {
-    const button = makeButton();
-    document.body.insertBefore(button, document.body.firstChild);
-    insertCount(button);
-  }
-
-  // make button
-  function makeButton() {
-    // create button
-    const button = document.createElement("button");
-    button.id = "hypothesis_button";
-    button.innerHTML = document.querySelector(".icon_hypothesis").innerHTML;
-    button.title = "Hypothesis annotations";
-    button.classList.add("icon_button");
-
-    function onClick(event) {
-      onButtonClick(event, button);
-    }
-
-    // attach click listeners
-    button.addEventListener("click", onClick);
-
-    return button;
-  }
-
-  // insert annotations count
-  async function insertCount(button) {
-    // get annotation count from Hypothesis based on url
-    let count = "-";
-    try {
-      const canonical = document.querySelector('link[rel="canonical"]');
-      const location = window.location;
-      const url = encodeURIComponent((canonical || location).href);
-      const response = await fetch(query + url);
-      const json = await response.json();
-      count = json.total || "-";
-    } catch (error) {
-      console.log(error);
-    }
-
-    // put count into button
-    const counter = document.createElement("span");
-    counter.id = "hypothesis_count";
-    counter.innerHTML = count;
-    button.title = "View " + count + " Hypothesis annotations";
-    button.append(counter);
-  }
-
-  // when button is clicked
-  function onButtonClick(event, button) {
-    const script = document.createElement("script");
-    script.src = embed;
-    document.body.append(script);
-    button.remove();
-  }
-
-  // start script when document is finished loading
-  window.addEventListener("load", start);
-</script>
-
-<!-- hypothesis icon -->
-
-<template class="icon_hypothesis">
-  <!-- modified from: https://simpleicons.org/icons/hypothesis.svg / https://git.io/Jf1VB -->
-  <svg width="16" height="16" viewBox="0 0 24 24" tabindex="-1">
-    <path
-      fill="currentColor"
-      d="M3.43 0C2.5 0 1.72 .768 1.72 1.72V18.86C1.72 19.8 2.5 20.57 3.43 20.57H9.38L12 24L14.62 20.57H20.57C21.5 20.57 22.29 19.8 22.29 18.86V1.72C22.29 .77 21.5 0 20.57 0H3.43M5.14 3.43H7.72V9.43S8.58 7.72 10.28 7.72C12 7.72 13.74 8.57 13.74 11.24V17.14H11.16V12C11.16 10.61 10.28 10.07 9.43 10.29C8.57 10.5 7.72 11.41 7.72 13.29V17.14H5.14V3.43M18 13.72C18.95 13.72 19.72 14.5 19.72 15.42A1.71 1.71 0 0 1 18 17.13A1.71 1.71 0 0 1 16.29 15.42C16.29 14.5 17.05 13.71 18 13.71Z"
-      tabindex="-1"
-    ></path>
-  </svg>
-</template>
-
-<style>
-  /* hypothesis activation button */
-  #hypothesis_button {
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    background: #ffffff;
-    border-radius: 0;
-    border-left: solid 1px #bdbdbd;
-    border-bottom: solid 1px #bdbdbd;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    z-index: 2;
-  }
-
-  /* hypothesis button svg */
-  #hypothesis_button > svg {
-    position: relative;
-    top: -4px;
-  }
-
-  /* hypothesis annotation count */
-  #hypothesis_count {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-  }
-
-  /* side panel */
-  .annotator-frame {
-    width: 280px !important;
-  }
-
-  /* match highlight color to rest of theme */
-  .annotator-highlights-always-on .annotator-hl {
-    background-color: #ffeb3b !important;
-  }
-
-  /* match focused color to rest of theme */
-  .annotator-hl.annotator-hl-focused {
-    background-color: #ff8a65 !important;
-  }
-
-  /* match bucket bar color to rest of theme */
-  .annotator-bucket-bar {
-    background: #f5f5f5 !important;
-  }
-
-  /* always hide button, toolbar, and tooltip on print */
-  @media only print {
-    #hypothesis_button {
-      display: none;
-    }
-
-    .annotator-frame {
-      display: none !important;
-    }
-
-    hypothesis-adder {
-      display: none !important;
-    }
-  }
-</style>
 <!-- 
   Mathjax Plugin (third-party) 
 
