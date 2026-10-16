@@ -17,10 +17,10 @@ tablenos-plus-name: "tabel"
 tablenos-star-name: "Tabel"
 authors:
   - github: codeslayer84
-    name: Jacob Davidsen
+    name: Jacob Gorm Davidsen
     initials: JD
-    # orcid: XXXX-XXXX-XXXX-XXXX
+    orcid: 0000-0002-5240-9452
     email: jdavidsen@ikk.aau.dk
     affiliations:
-      - Institut for Kommunikation og Psykologi, Aalborg Universitet
+      - Institut for Kultur og Kommunikation, Aalborg Universitet
     corresponding: true
