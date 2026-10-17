@@ -7,7 +7,7 @@ keywords:
 - Jefferson
 - quickguide
 lang: da-DK
-date-meta: '2026-10-16'
+date-meta: '2026-10-17'
 author-meta:
 - Jacob Gorm Davidsen
 header-includes: |
@@ -21,11 +21,11 @@ header-includes: |
   <meta name="citation_title" content="Quickguide til DOTE 2.0" />
   <meta property="og:title" content="Quickguide til DOTE 2.0" />
   <meta property="twitter:title" content="Quickguide til DOTE 2.0" />
-  <meta name="dc.date" content="2026-10-16" />
-  <meta name="citation_publication_date" content="2026-10-16" />
-  <meta property="article:published_time" content="2026-10-16" />
-  <meta name="dc.modified" content="2026-10-16T11:45:43+00:00" />
-  <meta property="article:modified_time" content="2026-10-16T11:45:43+00:00" />
+  <meta name="dc.date" content="2026-10-17" />
+  <meta name="citation_publication_date" content="2026-10-17" />
+  <meta property="article:published_time" content="2026-10-17" />
+  <meta name="dc.modified" content="2026-10-17T07:41:44+00:00" />
+  <meta property="article:modified_time" content="2026-10-17T07:41:44+00:00" />
   <meta name="dc.language" content="da-DK" />
   <meta name="citation_language" content="da-DK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://codeslayer84.github.io/DOTEQUICK/" />
   <meta name="citation_pdf_url" content="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/" />
-  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/" />
+  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,10 +66,10 @@ _Citér guiden: <https://doi.org/10.5281/zenodo.23417099>_
 
 <small><em>
 Denne version
-([permalink](https://codeslayer84.github.io/DOTEQUICK/v/53bb49ab54fd12698c48bee0965d345feaabc5e8/))
+([permalink](https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/))
 er automatisk genereret
-fra [codeslayer84/DOTEQUICK@53bb49a](https://github.com/codeslayer84/DOTEQUICK/tree/53bb49ab54fd12698c48bee0965d345feaabc5e8)
-den 2026-10-16.
+fra [codeslayer84/DOTEQUICK@8ca1a67](https://github.com/codeslayer84/DOTEQUICK/tree/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d)
+den 2026-10-17.
 </em></small>
 
 
@@ -217,7 +217,7 @@ Alle funktioner som relatere sig til import af andre filer eller projekter foreg
 
 ![Project info.](images/project-info.png){#fig:project-info width="30%"}
 
-Her finder de mest basale informationer om dit projekt. Til en start står der ikke meget. Men i takt med at du arbejder på dit projekt, så fylder DOTE automatisk informationerne ud. Du kan se mange spændende ting her. Du kan se hvilke medier fuler som er tilknyttet projektet, statistik om din transskription, antallet af clips og annotationer, antal af sync-codes og video-cues og dine checkpoints og autobackups. Med project info kan du hurtigt få et overblik over dit projekt.
+Her finder de mest basale informationer om dit projekt. Til en start står der ikke meget. Men i takt med at du arbejder på dit projekt, så fylder DOTE automatisk informationerne ud. Du kan se mange spændende ting her. Du kan se hvilke medier fuler som er tilknyttet projektet, statistik om din transskription, antallet af clips og annotationer, antal af sync-codes og video-cues og dine checkpoints og autobackups. Med project info kan du hurtigt få et overblik over dit projekt. Det er også her du finder ”Merge Transcripts”, hvis du skal samle flere transskriptioner til én (se afsnittet om at samarbejde og merge transskriptioner).
 
 ### 8. DOTE settings
 
@@ -250,6 +250,14 @@ Derfor har jeg kun fokus på genveje på dit keyboard:
   - CTRL+ALT+K or \[⌘+⌥+K\] = 1 frame frem
 
 Du er nødt til at bruge touchpad til at styre hastigheden – det er i højre side – vælg din ønskede hastighed under ”speed”.
+
+#### Capture – tag et screenshot fra videoen
+
+Skal du bruge et billede fra din video – fx til at vise en bestemt kropsholdning, et blik eller en genstand i din projektrapport? Så skal du ikke rode med dit operativsystems screenshot-værktøj. I toppen af videopanelet finder du knappen ”Capture”. Spol hen til det sted i videoen du vil have et billede af, sæt videoen på pause og klik på ”Capture” – så tager DOTE et screenshot af det billede, der vises i videoen lige nu.
+
+![Knappen ”Capture” i toppen af videopanelet.](images/capture-knap.png){#fig:capture-knap}
+
+Husk, at et screenshot fra din video stadig er data. Har du brug for at anonymisere personerne, før billedet ender i din rapport, så gør det, før du deler billedet med andre.
 
 ### Waveform
 
@@ -342,6 +350,34 @@ I DOTE kan du nemt eksportere dit arbejde.
 ### Eksporter transskriptioner til word
 
 De fleste studerende arbejder med mindre udsnit af deres grov transskriptioner i deres projektrapporter. Derfor kan du med DOTE eksportere din transskription til rtf (en fil der kan læses af Word). Du kan vælge at eksportere hele din transskription eller specifikke dele. Lad os se hvordan.
+
+
+## Samarbejd og merge transskriptioner {.page_break_before}
+
+Transskribering tager tid – og det går hurtigere, når I er flere om det. Med DOTE kan du samarbejde med andre om en transskription: I deler optagelsen op, transskriberer hver jeres del, og bagefter merger I jeres transskriptioner sammen til én samlet transskription. Det kan du gøre i den nyeste version af DOTE.
+
+### Del arbejdet op
+
+Inden I går i gang, så aftal hvem der transskriberer hvilken del af optagelsen – fx at du tager de første 15 minutter, og din studiekammerat tager resten. Hver af jer laver jeres egen transskription i DOTE, og I husker at sætte sync-codes i jeres transskription undervejs.
+
+### Merge transskriptionerne
+
+Når I er færdige, så samler du transskriptionerne i samme projekt. ”Merge Transcripts” gemmer sig under ”Project info” i top bjælken (nummer 7). Her ser du alle transskriptioner i projektet og hvilket tidsrum de dækker (fra første til sidste sync-code).
+
+![Merge Transcripts – vælg de transskriptioner, der skal merges.](images/merge-transcripts.png){#fig:merge-transcripts width="45%"}
+
+1.  Sæt flueben ud for de transskriptioner, du vil merge.
+2.  Giv den nye transskription et navn under ”New Transcript Name”.
+3.  Klik på ”Merge”.
+
+DOTE laver så en ny transskription, hvor jeres dele er sat sammen i rækkefølge efter sync-codes.
+
+### Pas på dine sync-codes
+
+Det er sync-codes der styrer, hvordan DOTE sætter transskriptionerne sammen. Derfor er det vigtigt at være opmærksom på to ting:
+
+- **Sync-codes må ikke overlappe hinanden.** Hvis din del går fra 0:00 til 15:00, så skal din studiekammerats del starte efter 15:00. Overlapper tidsrummene, så kan DOTE ikke vide, hvilken linje der kommer først.
+- **En transskription uden sync-codes kan ikke merges.** Den bliver vist med gråt og teksten ”No sync-codes” – som ”test” i @fig:merge-transcripts. Tilføj sync-codes til den, før du prøver igen.
 
 
 ## Tips og tricks {.page_break_before}
