@@ -35,6 +35,7 @@ Teksten ligger som Markdown i [`content`](content), én fil per afsnit:
 | `content/20.interface-top.md` | Top bjælken |
 | `content/30.paneler.md` | Panelerne |
 | `content/40.nyt-projekt.md` | Start nyt projekt |
+| `content/45.samarbejde.md` | Samarbejd og merge transskriptioner |
 | `content/50.importer-eksporter.md` | Import og eksport |
 | `content/60.tips.md` | Tips og tricks |
 | `content/manual-references.json` | Referencer der ikke kan slås op automatisk |
