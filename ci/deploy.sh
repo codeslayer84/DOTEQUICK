@@ -63,6 +63,11 @@ manubot webpage \
   --checkout=gh-pages \
   --version="$COMMIT"
 
+# Also publish the PDF under a readable file name (manuscript.pdf stays for old links)
+if [ -e webpage/manuscript.pdf ]; then
+  cp -L webpage/manuscript.pdf "webpage/Quickguide til DOTE 2.0.pdf"
+fi
+
 # Commit message
 MESSAGE="\
 $(git log --max-count=1 --format='%s')

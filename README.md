@@ -3,7 +3,7 @@
 <!-- usage note: do not edit this section -->
 
 [![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://codeslayer84.github.io/DOTEQUICK/)
-[![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf)
+[![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://codeslayer84.github.io/DOTEQUICK/Quickguide%20til%20DOTE%202.0.pdf)
 [![GitHub Actions Status](https://github.com/codeslayer84/DOTEQUICK/workflows/Manubot/badge.svg)](https://github.com/codeslayer84/DOTEQUICK/actions)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23417099.svg)](https://doi.org/10.5281/zenodo.23417099)
@@ -16,7 +16,7 @@ Guiden er *permanent beta* og bliver opdateret løbende.
 Den nyeste version ligger altid her:
 
 + **HTML** – <https://codeslayer84.github.io/DOTEQUICK/>
-+ **PDF** – <https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf>
++ **PDF** – <https://codeslayer84.github.io/DOTEQUICK/Quickguide%20til%20DOTE%202.0.pdf>
 
 Citér guiden med DOI'en [10.5281/zenodo.23417099](https://doi.org/10.5281/zenodo.23417099), som altid peger på den nyeste udgivne version.
 Hver GitHub-release (fx `v1.1`) arkiveres automatisk på Zenodo som en ny version.
