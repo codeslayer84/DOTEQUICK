@@ -19,7 +19,7 @@ Den nyeste version ligger altid her:
 + **PDF** – <https://codeslayer84.github.io/DOTEQUICK/Quickguide%20til%20DOTE%202.0.pdf>
 
 Citér guiden med DOI'en [10.5281/zenodo.23417099](https://doi.org/10.5281/zenodo.23417099), som altid peger på den nyeste udgivne version.
-Hver GitHub-release (fx `v1.1`) arkiveres automatisk på Zenodo som en ny version.
+Hver GitHub-release (fx `v1.2`) bygger PDF'en og udgiver den automatisk på Zenodo som en ny version (se [`.github/workflows/zenodo-release.yaml`](.github/workflows/zenodo-release.yaml)).
 
 Forslag til forbedringer modtages gerne som [issues](https://github.com/codeslayer84/DOTEQUICK/issues), pull requests eller på mail til <jdavidsen@ikk.aau.dk>.
 

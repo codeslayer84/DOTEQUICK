@@ -1,0 +1,55 @@
+name: Zenodo Release
+# On each published GitHub release: build the PDF, attach it to the release,
+# and publish it as a new version of the guide on Zenodo (same concept DOI).
+# Requires the ZENODO_TOKEN repository secret, and the repository switched
+# OFF in Zenodo's GitHub settings so Zenodo does not also archive the release.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag to publish to Zenodo
+        required: true
+jobs:
+  zenodo:
+    name: Zenodo
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      TAG: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+      PDF_NAME: Quickguide til DOTE 2.0.pdf
+      BUILD_PDF: true
+      SPELLCHECK: false
+    defaults:
+      run:
+        shell: bash --login {0}
+    steps:
+      - name: Checkout Release
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ env.TAG }}
+          fetch-depth: 0
+      - name: Install Environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: manubot
+          environment-file: build/environment.yml
+          auto-activate-base: false
+      - name: Build Manuscript
+        run: bash build/build.sh
+      - name: Prepare Files
+        run: |
+          mkdir -p release
+          cp output/manuscript.pdf "release/$PDF_NAME"
+          git archive --format=zip --prefix="DOTEQUICK-$TAG/" -o "release/DOTEQUICK-$TAG.zip" "$TAG"
+          ls -la release
+      - name: Attach PDF to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "$TAG" "release/$PDF_NAME" --clobber
+      - name: Publish to Zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: python3 ci/zenodo_release.py "$TAG" "release/$PDF_NAME" "release/DOTEQUICK-$TAG.zip"
