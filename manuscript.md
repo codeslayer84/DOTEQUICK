@@ -24,8 +24,8 @@ header-includes: |
   <meta name="dc.date" content="2026-10-17" />
   <meta name="citation_publication_date" content="2026-10-17" />
   <meta property="article:published_time" content="2026-10-17" />
-  <meta name="dc.modified" content="2026-10-17T07:41:44+00:00" />
-  <meta property="article:modified_time" content="2026-10-17T07:41:44+00:00" />
+  <meta name="dc.modified" content="2026-10-17T07:45:03+00:00" />
+  <meta property="article:modified_time" content="2026-10-17T07:45:03+00:00" />
   <meta name="dc.language" content="da-DK" />
   <meta name="citation_language" content="da-DK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://codeslayer84.github.io/DOTEQUICK/" />
   <meta name="citation_pdf_url" content="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/" />
-  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/f02e4bd64525fbe655436bdc094842be186d6c84/" />
+  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/f02e4bd64525fbe655436bdc094842be186d6c84/" />
+  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/f02e4bd64525fbe655436bdc094842be186d6c84/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@ _Citér guiden: <https://doi.org/10.5281/zenodo.23417099>_
 
 <small><em>
 Denne version
-([permalink](https://codeslayer84.github.io/DOTEQUICK/v/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d/))
+([permalink](https://codeslayer84.github.io/DOTEQUICK/v/f02e4bd64525fbe655436bdc094842be186d6c84/))
 er automatisk genereret
-fra [codeslayer84/DOTEQUICK@8ca1a67](https://github.com/codeslayer84/DOTEQUICK/tree/8ca1a671f1c5ef979c7960787f8aab6ea56fd34d)
+fra [codeslayer84/DOTEQUICK@f02e4bd](https://github.com/codeslayer84/DOTEQUICK/tree/f02e4bd64525fbe655436bdc094842be186d6c84)
 den 2026-10-17.
 </em></small>
 
@@ -340,6 +340,32 @@ Så har du brugt det rigtige tegn til at vise at ord/sætninger bliver sagt hvis
 ## Importer {.page_break_before}
 
 Du har modtaget en transskription fra en studiekammerat eller en AI. What to do?
+
+Du klikker på ”Import” i top bjælken. Så åbner ”Import into DOTE”, som guider dig igennem importen i tre trin. I første trin vælger du, hvilket format filen har – og så klikker du på ”Continue” ud for det rigtige format. Er du i tvivl, så klik på det lille i'et ud for formatet, så får du flere detaljer.
+
+![Import into DOTE – vælg formatet på den fil du vil importere.](images/import-format.png){#fig:import-format}
+
+### DOTE Project og DOTE Transcript
+
+Som studerende er det især de to første formater du får brug for:
+
+- **DOTE Project (.doteProject)** – et helt DOTE-projekt med det hele. Det er det du skal vælge, når en fra din projektgruppe sender dig sit projekt, eller når du vil åbne et projekt du selv har eksporteret, fx fra en anden computer.
+- **DOTE Transcript (.dote)** – en enkelt transskription i DOTEs eget format. Det er det du skal vælge, når en studiekammerat sender dig den del af transskriptionen, som vedkommende har lavet. Når transskriptionen er importeret i dit projekt, så kan du merge jeres transskriptioner sammen (se afsnittet om at samarbejde og merge transskriptioner).
+
+### Andre formater
+
+DOTE kan også importere en række andre formater:
+
+| Format | Filtype | Hvornår? |
+|---|---|---|
+| Basic Text File | .txt, .rtf | Almindelig tekst eller en rtf-fil, fx fra Word |
+| SRT Subtitle | .srt | Undertekstfiler – fx fra et automatisk transskriptionsværktøj |
+| CLAN / CHAT Transcript (Experimental) | .cha | Transskriptioner fra CLAN |
+| ELAN Transcript (Experimental) | .eaf | Annotationer fra ELAN |
+| Whisper Format | .whisper, .whisperx, .dote, .json | AI-transskriptioner fra Whisper |
+| Transcript Clips (JSON) | .json | Transcript-clips (annotationer) |
+
+Formater markeret med *Experimental* er stadig under udvikling – så tjek din transskription grundigt efter importen.
 
 ## Eksporter
 
