@@ -8,6 +8,9 @@ keywords:
   - Jefferson
   - quickguide
 lang: da-DK
+# Guide version shown on the front page. Bump it together with
+# content/80.versionshistorik.md before making a release with the same tag (vX.Y).
+guide_version: "1.3"
 # Danish labels for figures and tables (pandoc-fignos / pandoc-tablenos)
 fignos-caption-name: "Figur"
 fignos-plus-name: "figur"

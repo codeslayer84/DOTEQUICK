@@ -31,6 +31,13 @@ jobs:
         with:
           ref: ${{ env.TAG }}
           fetch-depth: 0
+      - name: Check Guide Version
+        run: |
+          GUIDE_VERSION=$(grep '^guide_version:' content/metadata.yaml | sed 's/^guide_version: *"\{0,1\}\([^"]*\)"\{0,1\}.*/\1/')
+          if [ "v$GUIDE_VERSION" != "$TAG" ]; then
+            echo "::error::Release tag $TAG does not match guide_version $GUIDE_VERSION in content/metadata.yaml. Bump guide_version (and content/80.versionshistorik.md), push, and release again."
+            exit 1
+          fi
       - name: Install Environment
         uses: conda-incubator/setup-miniconda@v3
         with:

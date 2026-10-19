@@ -38,8 +38,18 @@ Teksten ligger som Markdown i [`content`](content), én fil per afsnit:
 | `content/50.importer-eksporter.md` | Import og eksport |
 | `content/55.samarbejde.md` | Samarbejd og merge transskriptioner |
 | `content/60.tips.md` | Tips og tricks |
+| `content/80.versionshistorik.md` | Versionshistorik |
 | `content/manual-references.json` | Referencer der ikke kan slås op automatisk |
 | `content/images/` | Skærmbilleder |
+
+### Ny version
+
+1. Hæv `guide_version` i `content/metadata.yaml` (fx `"1.4"`) og skriv hvad der er nyt øverst i `content/80.versionshistorik.md`.
+2. Push til `main`.
+3. Lav en release med samme nummer: `gh release create v1.4 -R codeslayer84/DOTEQUICK --title "Quickguide til DOTE 2.0 v1.4" --notes "..."`
+
+Releasen udgives automatisk på Zenodo med PDF'en. Passer release-tagget ikke med `guide_version`, så stopper workflowet før Zenodo.
+Læsere kan følge nye versioner via [RSS](https://github.com/codeslayer84/DOTEQUICK/releases.atom).
 
 Hvert push til `main` bygger guiden via GitHub Actions og lægger HTML/PDF på `gh-pages`-branchen.
 Se [`USAGE.md`](USAGE.md) for Manubots Markdown-syntaks (figurer, citationer m.m.).
