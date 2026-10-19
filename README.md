@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/codeslayer84/DOTEQUICK/tree/gh-pages) branch hosts the contents of this directory at <https://codeslayer84.github.io/DOTEQUICK/>.
-The permalink for this webpage version is <https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/>.
+The permalink for this webpage version is <https://codeslayer84.github.io/DOTEQUICK/v/d0475f2ff349dd1b8539b225644c97bb07bdd05f/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://codeslayer84.github.io/DOTEQUICK/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`69472a6edc36018c0de721437ea349203c0ad03c`](https://github.com/codeslayer84/DOTEQUICK/commit/69472a6edc36018c0de721437ea349203c0ad03c).
+[`d0475f2ff349dd1b8539b225644c97bb07bdd05f`](https://github.com/codeslayer84/DOTEQUICK/commit/d0475f2ff349dd1b8539b225644c97bb07bdd05f).
