@@ -7,7 +7,7 @@ keywords:
 - Jefferson
 - quickguide
 lang: da-DK
-date-meta: '2026-10-18'
+date-meta: '2026-10-19'
 author-meta:
 - Jacob Gorm Davidsen
 header-includes: |
@@ -21,11 +21,11 @@ header-includes: |
   <meta name="citation_title" content="Quickguide til DOTE 2.0" />
   <meta property="og:title" content="Quickguide til DOTE 2.0" />
   <meta property="twitter:title" content="Quickguide til DOTE 2.0" />
-  <meta name="dc.date" content="2026-10-18" />
-  <meta name="citation_publication_date" content="2026-10-18" />
-  <meta property="article:published_time" content="2026-10-18" />
-  <meta name="dc.modified" content="2026-10-18T14:51:09+00:00" />
-  <meta property="article:modified_time" content="2026-10-18T14:51:09+00:00" />
+  <meta name="dc.date" content="2026-10-19" />
+  <meta name="citation_publication_date" content="2026-10-19" />
+  <meta property="article:published_time" content="2026-10-19" />
+  <meta name="dc.modified" content="2026-10-19T19:33:07+00:00" />
+  <meta property="article:modified_time" content="2026-10-19T19:33:07+00:00" />
   <meta name="dc.language" content="da-DK" />
   <meta name="citation_language" content="da-DK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://codeslayer84.github.io/DOTEQUICK/" />
   <meta name="citation_pdf_url" content="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/a9290b94f3be98deb1c7e238e0f664158f9709e5/" />
-  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/a9290b94f3be98deb1c7e238e0f664158f9709e5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/a9290b94f3be98deb1c7e238e0f664158f9709e5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/" />
+  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,6 +61,9 @@ manubot-clear-requests-cache: false
 
 
 
+**Version 1.3** · [Hvad er nyt?](#versionshistorik) · [Følg nye versioner (RSS)](https://github.com/codeslayer84/DOTEQUICK/releases.atom)
+
+
 _Citér guiden: <https://doi.org/10.5281/zenodo.23417099>_
 
 _Hent guiden som PDF: [Quickguide til DOTE 2.0.pdf](https://codeslayer84.github.io/DOTEQUICK/Quickguide%20til%20DOTE%202.0.pdf)_
@@ -68,10 +71,10 @@ _Hent guiden som PDF: [Quickguide til DOTE 2.0.pdf](https://codeslayer84.github.
 
 <small><em>
 Denne version
-([permalink](https://codeslayer84.github.io/DOTEQUICK/v/a9290b94f3be98deb1c7e238e0f664158f9709e5/))
+([permalink](https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/))
 er automatisk genereret
-fra [codeslayer84/DOTEQUICK@a9290b9](https://github.com/codeslayer84/DOTEQUICK/tree/a9290b94f3be98deb1c7e238e0f664158f9709e5)
-den 2026-10-18.
+fra [codeslayer84/DOTEQUICK@69472a6](https://github.com/codeslayer84/DOTEQUICK/tree/69472a6edc36018c0de721437ea349203c0ad03c)
+den 2026-10-19.
 </em></small>
 
 
@@ -455,6 +458,33 @@ Hvis DOTE ikke vil importere din video, eller waveformen mangler, så tjek under
 ### Alt er for småt (eller for stort)
 
 F10 zoomer ind på hele DOTE og F9 zoomer ud. Vil du kun have større tekst i transskriptionen, så ændrer du skriftstørrelsen under Options i transskriptionen. På nogle bærbare skal du holde FN nede for at bruge F-tasterne.
+
+
+## Versionshistorik {#versionshistorik .page_break_before}
+
+Guiden er *permanent beta* – den bliver opdateret, når DOTE bliver opdateret. Her kan du se hvad der er nyt i hver version. Har du en gammel PDF liggende, så tjek om der er kommet en nyere version: den nyeste version finder du altid via [DOI'en](https://doi.org/10.5281/zenodo.23417099) eller på [hjemmesiden](https://codeslayer84.github.io/DOTEQUICK/).
+
+Vil du have besked, når der kommer en ny version? Så kan du følge guiden med [RSS](https://github.com/codeslayer84/DOTEQUICK/releases.atom) – fx i Outlook eller din RSS-læser. Har du en GitHub-konto, så kan du også klikke på *Watch → Custom → Releases* på [guidens GitHub-side](https://github.com/codeslayer84/DOTEQUICK).
+
+### Version 1.3 – 19. oktober 2026
+
+- Nyt afsnit: Tips og tricks.
+- Nyt afsnit: Versionshistorik – og versionsnummer på forsiden.
+
+### Version 1.2 – 17. oktober 2026
+
+- Nyt afsnit: Capture – tag et screenshot fra videoen.
+- Nyt afsnit: Samarbejd og merge transskriptioner.
+- Import er udvidet med DOTE Project, DOTE Transcript og de andre formater.
+- PDF'en hedder nu ”Quickguide til DOTE 2.0.pdf”.
+
+### Version 1.1 – 16. oktober 2026
+
+- Guiden har fået en DOI, så du kan citere den.
+
+### Version 1.0 – 16. oktober 2026
+
+- Første version af guiden som hjemmeside og PDF.
 
 
 ## Referencer {.page_break_before}
