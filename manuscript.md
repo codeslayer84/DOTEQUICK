@@ -24,8 +24,8 @@ header-includes: |
   <meta name="dc.date" content="2026-10-19" />
   <meta name="citation_publication_date" content="2026-10-19" />
   <meta property="article:published_time" content="2026-10-19" />
-  <meta name="dc.modified" content="2026-10-19T19:33:07+00:00" />
-  <meta property="article:modified_time" content="2026-10-19T19:33:07+00:00" />
+  <meta name="dc.modified" content="2026-10-19T19:33:44+00:00" />
+  <meta property="article:modified_time" content="2026-10-19T19:33:44+00:00" />
   <meta name="dc.language" content="da-DK" />
   <meta name="citation_language" content="da-DK" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -41,9 +41,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://codeslayer84.github.io/DOTEQUICK/" />
   <meta name="citation_pdf_url" content="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://codeslayer84.github.io/DOTEQUICK/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/" />
-  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://codeslayer84.github.io/DOTEQUICK/v/d0475f2ff349dd1b8539b225644c97bb07bdd05f/" />
+  <meta name="manubot_html_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/d0475f2ff349dd1b8539b225644c97bb07bdd05f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://codeslayer84.github.io/DOTEQUICK/v/d0475f2ff349dd1b8539b225644c97bb07bdd05f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -61,7 +61,7 @@ manubot-clear-requests-cache: false
 
 
 
-**Version 1.3** · [Hvad er nyt?](#versionshistorik) · [Følg nye versioner (RSS)](https://github.com/codeslayer84/DOTEQUICK/releases.atom)
+**Version 1.4** · [Hvad er nyt?](#versionshistorik) · [Følg nye versioner (RSS)](https://github.com/codeslayer84/DOTEQUICK/releases.atom)
 
 
 _Citér guiden: <https://doi.org/10.5281/zenodo.23417099>_
@@ -71,9 +71,9 @@ _Hent guiden som PDF: [Quickguide til DOTE 2.0.pdf](https://codeslayer84.github.
 
 <small><em>
 Denne version
-([permalink](https://codeslayer84.github.io/DOTEQUICK/v/69472a6edc36018c0de721437ea349203c0ad03c/))
+([permalink](https://codeslayer84.github.io/DOTEQUICK/v/d0475f2ff349dd1b8539b225644c97bb07bdd05f/))
 er automatisk genereret
-fra [codeslayer84/DOTEQUICK@69472a6](https://github.com/codeslayer84/DOTEQUICK/tree/69472a6edc36018c0de721437ea349203c0ad03c)
+fra [codeslayer84/DOTEQUICK@d0475f2](https://github.com/codeslayer84/DOTEQUICK/tree/d0475f2ff349dd1b8539b225644c97bb07bdd05f)
 den 2026-10-19.
 </em></small>
 
@@ -466,10 +466,14 @@ Guiden er *permanent beta* – den bliver opdateret, når DOTE bliver opdateret.
 
 Vil du have besked, når der kommer en ny version? Så kan du følge guiden med [RSS](https://github.com/codeslayer84/DOTEQUICK/releases.atom) – fx i Outlook eller din RSS-læser. Har du en GitHub-konto, så kan du også klikke på *Watch → Custom → Releases* på [guidens GitHub-side](https://github.com/codeslayer84/DOTEQUICK).
 
-### Version 1.3 – 19. oktober 2026
+### Version 1.4 – 19. oktober 2026
+
+- Nyt afsnit: Versionshistorik – og versionsnummer på forsiden.
+- Du kan nu følge nye versioner med RSS.
+
+### Version 1.3 – 18. oktober 2026
 
 - Nyt afsnit: Tips og tricks.
-- Nyt afsnit: Versionshistorik – og versionsnummer på forsiden.
 
 ### Version 1.2 – 17. oktober 2026
 
